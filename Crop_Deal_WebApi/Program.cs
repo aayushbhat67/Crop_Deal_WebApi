@@ -1,6 +1,11 @@
+using Crop_Deal_WebApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<CropDealContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("CropDealCS")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

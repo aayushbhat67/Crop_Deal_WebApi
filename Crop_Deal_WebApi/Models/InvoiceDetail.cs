@@ -1,15 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace Crop_Deal_WebApi.Controllers.Models
+namespace Crop_Deal_WebApi.Models
 {
-    public class Invoice_Details
+    public class InvoiceDetail
     {
         [Key]
+        [Required]
+
         public int Invoice_id { get; set; }
 
-       
-        
+
+
 
         [Required]
         public int Quantity { get; set; }
@@ -25,13 +27,13 @@ namespace Crop_Deal_WebApi.Controllers.Models
 
 
         [ForeignKey("User")]
-        public int id { get; set; }
+        public int User_id{ get; set; }
         public User? User { get; set; }
 
 
-        [ForeignKey("Crop_Details")]
+        [ForeignKey("CropDetail")]
         public int CropDetails_id { get; set; }
-        public Crop_Details? Crop_Details { get; set; }
+        public CropDetail? CropDetail { get; set; }
 
     }
 }

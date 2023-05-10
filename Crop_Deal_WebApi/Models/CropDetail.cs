@@ -1,16 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Crop_Deal_WebApi.Controllers.Models
+namespace Crop_Deal_WebApi.Models
 {
-    public class Crop_Details
+    public class CropDetail
     {
         [Key]
         [Required]
         public int CropDetails_id { get; set; }
-        
 
-        
+
+
         [Required]
         public string? Crop_name { get; set; }
         [Required]
@@ -24,6 +23,5 @@ namespace Crop_Deal_WebApi.Controllers.Models
         [Required]
         public string? Location { get; set; }
 
-        
     }
 }
