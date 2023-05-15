@@ -28,13 +28,13 @@ namespace Crop_Deal_WebApi.Models
 
 
 
-        [Required]
-        public byte[]? PasswordHash { get; set; }
+       // [Required]
+       // public byte[]? PasswordHash { get; set; }
 
 
 
-        [Required]
-        public byte[]? PasswordSalt { get; set; }
+       // [Required]
+       // public byte[]? PasswordSalt { get; set; }
 
 
         [Required(ErrorMessage = "Please enter the contact number")]

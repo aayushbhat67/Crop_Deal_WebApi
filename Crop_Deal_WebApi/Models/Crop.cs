@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using System.Text.Json.Serialization;
 
 namespace Crop_Deal_WebApi.Models
 {
@@ -18,11 +19,15 @@ namespace Crop_Deal_WebApi.Models
         public string? Crop_image { get; set; }
 
         [ForeignKey("User")]
+        [JsonIgnore]
         public int User_id { get; set; }
+        [JsonIgnore]
         public User? User { get; set; }
 
         [ForeignKey("CropDetail")]
+        [JsonIgnore]
         public int CropDetails_id { get; set; }
+        [JsonIgnore]
         public CropDetail? CropDetail { get; set; }
 
     }

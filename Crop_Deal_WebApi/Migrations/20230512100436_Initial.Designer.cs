@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Crop_Deal_WebApi.Migrations
 {
     [DbContext(typeof(CropDealContext))]
-    [Migration("20230510070912_Initial")]
+    [Migration("20230512100436_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -192,14 +192,6 @@ namespace Crop_Deal_WebApi.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Roles")
                         .IsRequired()

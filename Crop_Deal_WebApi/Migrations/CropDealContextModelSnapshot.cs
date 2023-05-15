@@ -190,14 +190,6 @@ namespace Crop_Deal_WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("Roles")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
